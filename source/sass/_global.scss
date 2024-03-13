@@ -1,0 +1,37 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  margin: 0;
+  max-width: 1200px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin-left: 18px;
+  margin-right: 18px;
+  @media (min-width: $tablet-width) {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+}

@@ -1,0 +1,221 @@
+.page-header {
+  position: relative;
+  height: 56px;
+}
+
+.logo-wrapper {
+  z-index: 100;
+  position: relative;
+}
+
+.logo-link {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.logo-img--mobile {
+  @media (min-width: $tablet-width)  {
+    display: none;
+  }
+}
+
+.logo-img--tablet {
+  display: none;
+  @media (min-width: $tablet-width)  {
+    display: block;
+    
+  }
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.logo-img--desktop {
+  display: none;
+  @media (min-width: $desktop-width)  {
+    display: block;
+  }
+}
+
+.main-nav {
+  position: relative;
+  background-color: #81b3d2;
+  z-index: 1000;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 0.15s linear;
+  @media (min-width: $tablet-width) {
+    z-index: 10;
+    clip-path: none;
+    background-color: transparent;
+  }
+}
+
+.menu-open .main-nav {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition: clip-path 0.3s linear;
+}
+
+.nav-list {
+  @include ul-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.nav-item {
+  min-height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+  @media (min-width: $tablet-width) {
+    width: 153px;
+    border: none;
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+  }
+  @media (min-width: $desktop-width) {
+    width: 239px;
+    border: none;
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  transition: color 0.3s ease;
+  &:hover {
+    background-color: #669ec0;
+    transition: background-color   0.3s ease;
+  }
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+    transition: color 0s ease;
+  }
+  @media (min-width: $tablet-width) {
+    color: #000000;
+    font-size: 14px;
+    line-height: 26px;
+    &:hover {
+      color: #81b3d2;
+      transition: color 0.3s ease;
+    }
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+      transition: color 0s ease;
+    }
+    &--current {
+      color: #766357;
+      &:hover {
+        color: #766357;
+      }
+    }
+  }
+}
+
+.nav-burger-wrapper {
+  cursor: pointer;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  z-index: 3000;
+  &:hover {
+    box-shadow: 0 0 3px 0 #8d8989;
+  }
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.nav-burger-line {
+  display: block;
+  width: 22px;
+  height: 4px;
+  position: absolute;
+  &:hover {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+  &:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    background-color: #81b3d2;
+    transition: opacity 0.2s ease;
+  }
+  &:nth-child(2) {
+    top: 9px;
+    transform: rotate(0);
+    background-color: #81b3d2;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  &:nth-child(3) {
+    top: 9px;
+    transform: rotate(0);
+    background-color: #81b3d2;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  &:nth-child(4) {
+    opacity: 1;
+    transform: translateY(18px);
+    background-color: #81b3d2;
+    transition: opacity 0.2s ease;
+  }
+}
+
+.menu-open .nav-burger-line {
+  &:nth-child(1) {
+      opacity: 0;
+      transform: translateY(0);
+      background-color: #81b3d2;
+      transition: opacity 0.2s ease;
+    }
+  
+    &:nth-child(2) {
+      top: 9px;
+      transform:  rotate(45deg) scaleX(1.2);
+      background-color: #ffffff;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+  
+    &:nth-child(3) {
+      top: 9px;
+      transform:  rotate(-45deg) scaleX(1.2);
+      background-color: #ffffff;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+  
+    &:nth-child(4) {
+      opacity: 0;
+      transform: translateY(18px);
+      background-color: #81b3d2;
+      transition: opacity 0.2s ease;
+    }
+}
