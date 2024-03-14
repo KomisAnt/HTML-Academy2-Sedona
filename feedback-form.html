@@ -4,44 +4,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная - HTML Academy 2: SEDONA</title>
+  <title>Форма обратной связи - HTML Academy 2: SEDONA</title>
   <link rel="shortcut icon" href="favicon152.ico" type="image/x-icon">
   <link rel="stylesheet" href="source/css/style.css">
 </head>
 
-  <header class="page-header">
-    <div class="logo-wrapper" tabindex="3">
-      <a class="logo-link" href="index.html">
-        <img class="logo-img--mobile" src="/source/img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
-        <img class="logo-img--tablet" src="/source/img/logotype-tablet.svg" width="102" height="84" alt="Логотип Sedona">
-        <img class="logo-img--desktop" src="/source/img/logotype-desktop.svg" width="187" height="97"
-          alt="Логотип Sedona">
-      </a>
+<header class="page-header">
+  <div class="logo-wrapper" tabindex="3">
+    <a class="logo-link" href="index.html">
+      <img class="logo-img--mobile" src="/source/img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+      <img class="logo-img--tablet" src="/source/img/logotype-tablet.svg" width="102" height="84" alt="Логотип Sedona">
+      <img class="logo-img--desktop" src="/source/img/logotype-desktop.svg" width="187" height="97"
+        alt="Логотип Sedona">
+    </a>
+  </div>
+
+  <nav class="main-nav">
+    <ul class="nav-list container">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html" tabindex="1">Главная</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="catalog.html" tabindex="2">Фото и видео</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link--current" tabindex="4">Форма отзыва</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" tabindex="5">Html Academy</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="nav-burger-wrapper">
+    <span class="nav-burger-line"></span>
+    <span class="nav-burger-line"></span>
+    <span class="nav-burger-line"></span>
+    <span class="nav-burger-line"></span>
+  </div>
+</header>
+
+<main class="feedback-form-page">
+  <h1 class="visually-hidden">Форма обратной связи Sedona</h1>
+
+  <div class="main-banner-wrapper">
+    <div class="main-banner container">
+      <img class="feedback-banner__title" src="/source/img/text-feedback-sedona.svg" width="229" height="39"
+        alt="Добро пожаловать в Sedona">
     </div>
-  
-    <nav class="main-nav">
-      <ul class="nav-list container">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html" tabindex="1">Главная</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="catalog.html" tabindex="2">Фото и видео</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link--current" tabindex="4">Форма отзыва</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="5">Html Academy</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="nav-burger-wrapper">
-      <span class="nav-burger-line"></span>
-      <span class="nav-burger-line"></span>
-      <span class="nav-burger-line"></span>
-      <span class="nav-burger-line"></span>
+    <div class="main-banner-decor"></div>
+  </div>
+
+  <section class="feedback-form-wrapper">
+    <div class="feedback-form__text container">
+      <h2 class="feedback-form__title">Оставьте свой отзыв</h2>
+      <p class="feedback-form__description">
+        Помогите нашим отелям стать лучше! <br> оставьте отзыв о них, а также о посещенных вами достопримечательностях
+      </p>
     </div>
-  </header>
+    <form class="feedback-form container" action="#" method="post">
+      <fieldset class="form-item form-item__introduce">
+        <legend class="form-item__title">Представьтесь:</legend>
+        <p>
+          <label class="form-item__label">
+            Имя<sup>&#42;</sup>:
+            <input class="form-input--text" type="text" name="user-name" placeholder="Петр">
+          </label>>
+        </p>
+        <p>
+          <label class="form-item__label">
+            Фамилия<sup>&#42;</sup>:
+            <input class="form-input--text" type="text" name="user-surname" placeholder="Иванов">
+          </label>
+        </p>
+        <p>
+          <label class="form-item__label">
+            Отчество<sup>&#42;</sup>:
+            <input class="form-input--text" type="text" name="user-patronymic" placeholder="Александрович">
+          </label>
+        </p>
+      </fieldset>
+      <fieldset class="form-item form-item__contacts">
+        <legend class="form-item__title">Контактная информация:</legend>
+        <p>
+          <label class="form-item__label">
+            Контактный телефон<sup>&#42;</sup>:
+            <input class="form-input--text" type="tel" name="user-phone" placeholder="Введите телефон">
+          </label>
+        </p>
+        <p>
+          <label class="form-item__label">
+            Электронная почта<sup>&#42;</sup>:
+            <input class="form-input--text" type="email" name="user-email" placeholder="Введите e-mail">
+          </label>
+        </p>
+      </fieldset>
+      <fieldset class="form-item form-item__impression">
+        <legend class="form-item__title">Ваше общее впечатление:</legend>
+        <p>
+          <label class="form-item__label" for="impression-positive">
+            <input class="form-input--radio" type="radio" name="impression" id="impression-positive"
+              value="impression-positive" checked>
+            <span>Скорее положительное</span>
+          </label>
+        </p>
+        <p>
+          <label class="form-item__label" for="impression-negative">
+            <input class="form-input--radio" type="radio" name="impression" id="impression-negative"
+              value="impression-negative">
+            <span>Скорее отрицательное</span>
+          </label>
+        </p>
+        <p>
+          <label class="form-item__label" for="impression-unknown">
+            <input class="form-input--radio" type="radio" name="impression" id="impression-unknown"
+              value="impression-unknown">
+            <span>Затрудняюсь ответить</span>
+          </label>
+        </p>
+      </fieldset>
+      <fieldset class="form-item form-item__attractions">
+        <legend class="form-item__title">Посещенные достопримечательности:</legend>
+        <p>
+          <label class="form-item__label" for="devil-bridge">
+            <input class="form-input--checkbox" type="checkbox" name="devil-bridge" id="devil-bridge" checked>
+            <span>Мост Дьявола</span>
+          </label>
+        </p>
+        <p>
+          <label class="form-item__label" for="bell-mountain">
+            <input class="form-input--checkbox" type="checkbox" name="bell-mountain" id="bell-mountain" checked>
+            <span>Гора-Колокол</span>
+          </label>
+        </p>
+        <p>
+          <label class="form-item__label" for="slaid-park">
+            <input class="form-input--checkbox" type="checkbox" name="slaid-park" id="slaid-park" checked>
+            <span>Слайд-парк</span>
+          </label>
+        </p>
+        <p>
+          <label class="form-item__label" for="red-rocks">
+            <input class="form-input--checkbox" type="checkbox" name="red-rocks" id="red-rocks">
+            <span>Красные скалы</span>
+          </label>
+        </p>
+      </fieldset>
+      <fieldset class="form-item form-item__describe">
+        <legend class="form-item__title">Опишите свои эмоции:</legend>
+        <textarea class="form-item--textarea" name="describe-emotions" id="describe-emotions" cols="30" rows="10"
+          placeholder="Опишите подробно все свои восторги"></textarea>
+      </fieldset>
+      <button class="feedback-form__button" type="submit">Отправить отзыв</button>
+    </form>
+  </section>
+</main>
 
 <footer class="footer">
   <div class="footer-wrapper container">
