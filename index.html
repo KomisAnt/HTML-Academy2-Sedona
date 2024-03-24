@@ -14,12 +14,17 @@
   <header class="page-header">
     <div class="logo-wrapper" tabindex="3">
       <a class="logo-link" href="index.html">
-        <img class="logo-img--mobile" src="/source/img/logotype-mobile.svg" width="102" height="84"
+        <picture>
+          <source media="(min-width: 1200px)" srcset="/source/img/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="/source/img/logotype-tablet.svg">
+          <img class="logo-img" src="/source/img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+        </picture>
+        <!-- <img class="logo-img--mobile" src="/source/img/logotype-mobile.svg" width="102" height="84"
           alt="Логотип Sedona">
         <img class="logo-img--tablet" src="/source/img/logotype-tablet.svg" width="102" height="84"
           alt="Логотип Sedona">
         <img class="logo-img--desktop" src="/source/img/logotype-desktop.svg" width="187" height="97"
-          alt="Логотип Sedona">
+          alt="Логотип Sedona"> -->
       </a>
     </div>
 

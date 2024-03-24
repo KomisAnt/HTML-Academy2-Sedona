@@ -30,6 +30,10 @@ body {
     margin-left: 32px;
     margin-right: 32px;
   }
+  @media (min-width: $desktop-before-width) {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
   @media (min-width: $desktop-width) {
     margin-left: 90px;
     margin-right: 90px;
