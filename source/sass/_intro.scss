@@ -2,7 +2,7 @@
   min-height: 389px;
   background-color: rgb(161, 202, 249);
   color: black;
-  background-image: url('/source/img/intro-desktop.jpg');
+  background-image: url('/img/intro-desktop.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 
   }
   @media (min-resolution: 2dppx) {
-    background-image: url('/source/img/intro-desktop@2x.jpg');
+    background-image: url('/img/intro-desktop@2x.jpg');
     background-size: cover;
   }
   
@@ -37,7 +37,7 @@
   bottom: 0;
   width: 1200px;
   height: 57px;
-  background-image: url('/source/img/intro-triangle.svg');
+  background-image: url('/img/intro-triangle.svg');
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -408,7 +408,7 @@
 }
 
 .form-input--checkbox:checked ~ .custom-checkbox::before {
-  content: url(/source/img/icons/icon-tick.svg);
+  content: url(/img/icons/icon-tick.svg);
   width: 23px;
   height: 16px;
   position: absolute;
@@ -478,6 +478,48 @@
   @media (min-width: $tablet-width) {
     display: block;
   }
+}
+
+
+//*** Фото и видео ***//
+
+.catalog-form__text {
+  margin-top: 35px;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-before-width) {
+    margin-bottom: 110px;
+  }
+}
+
+.catalog-form__title {
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.catalog-form__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #333333;
+  text-align: center;
 }
 
 
