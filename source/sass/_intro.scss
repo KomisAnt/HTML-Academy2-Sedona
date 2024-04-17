@@ -341,16 +341,19 @@
   color: #000000;
   font-weight: 700;
   background-color: #f2f2f2;
-
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #e5e5e5;
+  }
+  &:focus {
+    outline: none;
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+  }
   &::placeholder {
     color: #000000;
   }
 }
-
-// .form-input--text {
-//   margin-left: 15px;
-//   width: 100%;
-// }
 
 .form-input--contacts {
   margin: 0;
@@ -381,6 +384,13 @@
   background-color: #f2f2f2;
   position: absolute;
   left: 0;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #e5e5e5;
+  }
+  &:active {
+    background-color: #d5d5d5;
+  }
 }
 
 .custom-radio {
@@ -403,6 +413,10 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
+.form-input--radio:checked:active ~ .custom-radio::before {
+  opacity: 0.3;
+}
+
 .form-input--checkbox {
   display: none;
 }
@@ -417,6 +431,10 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
+.form-input--checkbox:checked:active ~ .custom-checkbox::before {
+  opacity: 0.3;
+}
+
 .form-item--textarea {
   box-sizing: border-box;
   padding: 13px 20px;
@@ -429,9 +447,16 @@
   min-height: 160px;
   border: none;
   background-color: #f2f2f2;
-  
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #e5e5e5;
+  }
+  &:focus {
+    outline: none;
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+  }
   &::placeholder {
-    // font-family: 'PT Sans', Arial, sans-serif;
     color: #000000;
   }
 }

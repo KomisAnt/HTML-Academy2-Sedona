@@ -2,23 +2,35 @@
 .advantages-title-wrapper {
   min-width: 285px;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 31px;
   @media (min-width: $tablet-width) {
     min-width: 520px;
+    margin-bottom: 57px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 41px;
   }
 }
 
 .advantages-title {
   margin: 0;
-  padding: 30px 10px 25px 10px;
+  padding: 28px 10px 29px 10px;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 27px;
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
   color: #000000;
   @media (min-width: $tablet-width) {
     font-size: 21px;
+    padding: 39px 50px 30px 50px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 619px;
   }
 }
 
@@ -47,7 +59,7 @@
   text-align: center;
   background-color: #eeeeee;
   border-bottom: 1px solid #d6d6d6;
-  &:first-child {
+  &--first {
     position: relative;
     overflow-x: hidden;
   }
@@ -59,7 +71,7 @@
     position: absolute;
     width: 767px;
     height: 37px;
-    top: -22px;
+    top: -20px;
     left: 50%;
     transform: translateX(-50%);
     background-image: url(/img/triangle-mobile.svg);
@@ -80,6 +92,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: none;
+    @media (min-width: $tablet-width) {
+      height: 256px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -120,6 +135,12 @@
   }
 }
 
+.advantages-item--sixth.advantages-item,
+.advantages-item--seventh.advantages-item,
+.advantages-item--eighth.advantages-item {
+  min-height: 167px;
+}
+
 .advantages-item--photo.first-photo {
   background-image: url('/img/photo-city-tablet.jpg');
   background-size: cover;
@@ -127,17 +148,67 @@
 
 .advantages-item--photo.second-photo {
   background-image: url('/img/photo-bridge-tablet.jpg');
+  background-size: cover;
+  @media (min-width: $tablet-width) {
+    background-position: inherit;
+  }
 }
 
 .advantages-item-inner {
-  padding-top: 40px;
-  padding-bottom: 35px;
+  padding-top: 36px;
+  padding-bottom: 37px;
+  @media (min-width: $tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 21px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-top: 52px;
+  }
+}
+
+.advantages-item--first > .advantages-item-inner {
+  padding-top: 52px;
+  padding-bottom: 37px;
+  @media (min-width: $tablet-width) {
+    padding-top: 42px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-top: 49px;
+  }
+}
+
+.advantages-item--fourth > .advantages-item-inner,
+.advantages-item--sixth > .advantages-item-inner,
+.advantages-item--seventh > .advantages-item-inner,
+.advantages-item--eighth > .advantages-item-inner {
+  @media (min-width: $tablet-width) {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: $desktop-width) {
+    width: auto;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+
+.advantages-item--sixth > .advantages-item-inner,
+.advantages-item--seventh > .advantages-item-inner,
+.advantages-item--eighth > .advantages-item-inner {
+  padding-top: 25px;
+  padding-bottom: 24px;
+  @media (min-width: $tablet-width) {
+    padding-top: 42px;
+  }
 }
 
 .advantages-item__title,
 .achievement-list__item-title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -145,21 +216,42 @@
   @media (min-width :$tablet-width) {
     font-size: 21px;
   }
+  @media (min-width: $desktop-width) {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .advantages-item__count,
 .advantages-item__description,
 .achievement-list__item-description {
   margin: 0;
+  margin-left: 15px;
+  margin-right: 15px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .advantages-item__count {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+  }
 }
+
+// .advantages-item--sixth ~ .advantages-item__description,
+// .advantages-item--seventh ~ .advantages-item__description,
+// .advantages-item--eighth ~ .advantages-item__description {
+//   margin-left: 10px;
+//   margin-right: 10px;
+// }
 
 .advantages-item.achievement-list {
   background-color: #ffffff;
@@ -172,22 +264,38 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    gap: 15px;
+    gap: 30px;
+    margin-top: 57px;
+    margin-bottom: 31px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-bottom: 21px;
   }
 }
 
 .achievement-list__item {
   position: relative;
   text-align: left;
-  padding-left: 52px;
-  margin-bottom: 25px;
+  padding-left: 51px;
+  margin-bottom: 28px;
+  &--first {
+    padding-left: 51px;
+    margin-bottom: 28px;
+  }
+  &:last-child {
+    margin: 0;
+    @media (min-width: $desktop-width) {
+      margin-left: 30px;
+      margin-right: 34px;;
+    }
+  }
   &::before {
     content: '';
     width: 40px;
     height: 40px;
     position: absolute;
     left: 0;
-    top: -7px;
+    top: -10px;
   }
   &--house::before {
     background-image: url(/img/icons/icon-house.svg);
@@ -201,6 +309,7 @@
     background-image: url(/img/icons/icon-gift.svg);
     background-size: 32px 38px;
     background-repeat: no-repeat;
+    left: 7px;
       @media (min-width: $tablet-width) {
         background-size: 76px 68px;
       }
@@ -209,6 +318,8 @@
     background-image: url(/img/icons/icon-burger.svg);
     background-size: 40px 35px;
     background-repeat: no-repeat;
+    left: 0;
+    top: -8px;
     @media (min-width: $tablet-width) {
       background-size: 64px 75px;
     }
@@ -235,8 +346,39 @@
             height: 75px;
             position: absolute;
             left: 50%;
-            top: -7px;
+            top: 0;
             transform: translateX(-50%);
           }
     }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 30px;
+    margin-right: 34px;
+  }
+}
+
+.achievement-list__item--house > .achievement-list__item-description,
+.achievement-list__item--gifts > .achievement-list__item-description,
+.achievement-list__item--food > .achievement-list__item-description {
+  margin-left: 0;
+  @media (min-width: $tablet-width) {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 274px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.achievement-list__item-title {
+  margin-bottom: 14px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+  }
+}
+
+.achievement-list__item-description {
+  margin-right: 5px;
 }

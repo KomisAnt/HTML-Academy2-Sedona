@@ -149,9 +149,9 @@
 .nav-burger-wrapper {
   cursor: pointer;
   position: absolute;
-  top: 17px;
-  right: 20px;
-  width: 22px;
+  top: 15px;
+  right: 18px;
+  width: 25px;
   height: 22px;
   z-index: 3000;
   &:hover {
@@ -164,7 +164,7 @@
 
 .nav-burger-line {
   display: block;
-  width: 22px;
+  width: 23px;
   height: 4px;
   position: absolute;
   &:hover {
@@ -176,7 +176,7 @@
   }
   &:nth-child(1) {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-1px);
     background-color: #81b3d2;
     transition: opacity 0.2s ease;
   }
@@ -194,7 +194,7 @@
   }
   &:nth-child(4) {
     opacity: 1;
-    transform: translateY(18px);
+    transform: translateY(20px);
     background-color: #81b3d2;
     transition: opacity 0.2s ease;
   }
