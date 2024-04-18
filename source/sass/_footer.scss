@@ -18,6 +18,16 @@
     }
 }
 
+.footer-catalog-wrapper {
+  margin-top: 138px;
+  @media (min-width: $tablet-width) {
+    margin-top: 164px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-top: 115px;
+  }
+}
+
 .footer-hashtag {
   margin-bottom: 31px;
   @media (min-width: $tablet-width) {
@@ -82,6 +92,10 @@
     margin-right: 5px;
     margin-left: 8px;
   }
+}
+
+.footer-catalog-wrapper .copyright-text {
+  margin-right: 5px;
 }
 
 .copyright-link {
