@@ -98,6 +98,14 @@
   margin-right: 5px;
 }
 
+.footer-feedback-form-wrapper {
+  @media (min-width: $desktop-width) {
+    margin-top: 41px;
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+}
+
 .copyright-link {
   display: flex;
   justify-content: center;
