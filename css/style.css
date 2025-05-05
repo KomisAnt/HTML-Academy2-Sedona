@@ -297,7 +297,7 @@ body {
   min-height: 389px;
   background-color: rgb(161, 202, 249);
   color: black;
-  background-image: url("/img/intro-desktop.jpg");
+  background-image: url("../img/intro-desktop.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
